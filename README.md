@@ -1,7 +1,7 @@
 # Frontend - Desafio Vuex
 ![](print.png)
 
-Demo: https://cataline-vuex-desafio-45gfqs4p1-pvictorf.vercel.app/
+Demo: https://cataline-vuex-desafio.vercel.app/
 
 ### Telas
 - Faq
