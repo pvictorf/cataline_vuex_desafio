@@ -13,6 +13,10 @@ a {
   text-decoration: none;
 }
 
+li {
+  list-style: none;
+}
+
 @font-face {
   font-family: Lato;
   src: url('~@/assets/fonts/Lato-Regular.ttf');

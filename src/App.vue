@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <transition class="slide" :name="$transition" mode="out-in">
-       <component :is="$currentPage" />
+      <component :is="$currentPage" />
     </transition>
   </div>
 </template>
@@ -35,19 +35,17 @@ export default {
   grid-template-rows: 458px;
   justify-content: center;
   align-content: center;
+  background: #f5f6f8;
   height: 100vh;
 }
 .container {
-
-  /* UI */
-  background: transparent
-    linear-gradient(180deg, #404451 0%, var(--unnamed-color-26282c) 100%) 0% 0%
-    no-repeat padding-box;
-  background: transparent linear-gradient(180deg, #404451 0%, #26282c 100%) 0%
-    0% no-repeat padding-box;
-  box-shadow: 0px 10px 30px #3f445266;
+  padding: 2rem .375rem;
+  padding-bottom: .875rem;
+  background-image: linear-gradient(180deg,#3f4452,#26282c);
   border-radius: 15px;
-  opacity: 1;
+  box-shadow: 0 8px 21px 3px rgb(0 0 0 / 19%);
+  overflow: hidden;
+  position: relative;
 }
 
 .slide-left-enter-active,
