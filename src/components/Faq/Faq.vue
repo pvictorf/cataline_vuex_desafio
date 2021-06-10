@@ -15,7 +15,7 @@
         :key="faq.id" 
         @click="goToQuestions(faq)" 
       >
-        <img :src="`@/assets/images/${faq.icon}`" :alt="faq.title" >
+        <img :src="require(`@/assets/images/${faq.icon}`)" :alt="faq.title" >
         <span>{{ faq.title }}</span>
       </li>
     </ul>
@@ -61,8 +61,8 @@ export default {
     font-size: 1.25rem;
   }
   .heading-text p {
-    margin-top: 0.222rem;
-    font-size: 0.875rem;
+    margin-top: 0.275rem;
+    font-size: 0.825rem;
   }
   .categories {   
     display: grid;
@@ -72,8 +72,15 @@ export default {
     color: #f5f6f8;
     padding: 1rem 1.875rem;
     transition: background-color .2s ease-in-out;
+
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    grid-gap: 1.650rem;
   }
   .category-item:hover {
     background-color: #3F4452;
+  }
+  .category-item img {
+    width: 1.5rem;
   }
 </style>

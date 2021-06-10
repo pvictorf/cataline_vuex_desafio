@@ -32,7 +32,7 @@ export default {
 #app {
   display: grid;
   grid-template-columns: 305px;
-  grid-template-rows: 458px;
+  grid-template-rows: 29.839rem;
   justify-content: center;
   align-content: center;
   background: #f5f6f8;
