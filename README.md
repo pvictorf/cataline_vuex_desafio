@@ -3,6 +3,25 @@
 
 Demo: https://cataline-vuex-desafio-45gfqs4p1-pvictorf.vercel.app/
 
+### Telas
+- Faq
+- Busca
+- Perguntas
+- Resposta
+
+### Conceitos e Técnicas utilizados
+- Componentização
+- Dynamic componentes
+- Transitions
+- Gerenciamento de Estado (Vuex)
+- Conceitos de ES6 (filter e map)
+- Transition
+- CSS Grid
+- Styled scoped
+- Diretivas 
+- Refs
+
+
 ## Project setup
 ```
 npm install
@@ -18,10 +37,4 @@ npm run dev
 npm run build
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
