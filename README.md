@@ -1,5 +1,5 @@
 # Frontend - Desafio Vuex
-![](print.gif)
+![](print.png)
 
 Demo: https://cataline-vuex-desafio-45gfqs4p1-pvictorf.vercel.app/
 
