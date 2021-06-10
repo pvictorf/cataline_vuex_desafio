@@ -1,5 +1,8 @@
 <template>
   <div class="faq">
+    <div class="heading-search" @click="goToSearch">
+      <img src="@/assets/images/search.svg" alt="Buscar">
+    </div>
     <div class="heading-image">
       <img src="@/assets/images/astronaut.svg" alt="Astronout">
     </div>
@@ -37,6 +40,9 @@ export default {
     goToQuestions(faq) {
       this.$store.dispatch('goTo', { page: 'FaqQuestion' })
       this.$store.dispatch('selectFaq', faq)
+    },
+    goToSearch() {
+      this.$store.dispatch('goTo', { page: 'FaqSearch' })
     }
   }
 }
@@ -49,13 +55,22 @@ export default {
     grid-auto-rows: auto;
     color: #fff;
   }
+  .heading-search {
+    display: grid;
+    grid-template-columns: 24px;
+    justify-content: end;
+    padding: 0 1rem;
+    opacity: 0.7;
+    border-radius: 8px;
+    cursor: pointer;
+  }
   .heading-image {
     display: grid;
     justify-content: center;
-    grid-template-columns: 242px;
+    grid-template-columns: 234px;
   }
   .heading-text {
-    padding: 1.1rem 1.875rem 2.125rem;
+    padding: 1.1rem 1.875rem 1.1rem;
   }
   .heading-text h1 {
     font-size: 1.25rem;

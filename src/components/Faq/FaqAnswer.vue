@@ -23,6 +23,7 @@ export default {
   },
   methods: {
     goBack() {
+      const faq = this.$store.getters.$getFaq
       this.$store.dispatch('goBack', { page: 'FaqQuestion' })
     }
   }

@@ -10,10 +10,11 @@
 import Faq from '@/components/Faq/Faq.vue'
 import FaqQuestion from '@/components/Faq/FaqQuestion.vue'
 import FaqAnswer from '@/components/Faq/FaqAnswer.vue'
+import FaqSearch from '@/components/Faq/FaqSearch.vue'
 
 export default {
   name: 'App',
-  components: { Faq, FaqQuestion, FaqAnswer },
+  components: { Faq, FaqQuestion, FaqAnswer, FaqSearch },
   created() {
     this.$store.dispatch('fetchFaqs')
   },
@@ -32,7 +33,7 @@ export default {
 #app {
   display: grid;
   grid-template-columns: 305px;
-  grid-template-rows: 29.839rem;
+  grid-template-rows: 29.9rem;
   justify-content: center;
   align-content: center;
   background: #f5f6f8;

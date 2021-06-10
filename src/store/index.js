@@ -3,9 +3,9 @@ import { faqCategories } from '@/database/db.json'
 
 export default createStore({
   state: {
-    faqs: [],
     currentPage: 'Faq',
     transition: '',
+    faqs: [],
     faq: {},
     question: {}
   },
@@ -24,7 +24,7 @@ export default createStore({
     },
     SET_QUESTION(state, question) {
       state.question = question
-    }
+    },
   },
   actions: {
     fetchFaqs(ctx) {
@@ -61,6 +61,15 @@ export default createStore({
     },
     $getQuestion(state) {
       return state.question
+    },
+    $findFaqsBySearch: (state) => (search) => {
+      const query = search.trim().toLowerCase();
+      if(!query) return
+
+      const faqs = state.faqs.filter(faq => 
+        faq.questions.filter(question => question.title.toLowerCase().includes(query)).length
+      )
+      return faqs
     }
   }
 })
