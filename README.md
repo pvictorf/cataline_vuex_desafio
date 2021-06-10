@@ -1,6 +1,7 @@
-# frontend
+# Frontend - Desafio Vuex
+![](print.gif)
 
-https://cataline-vuex-desafio-ft33ivz10-pvictorf.vercel.app/
+Demo: https://cataline-vuex-desafio-45gfqs4p1-pvictorf.vercel.app/
 
 ## Project setup
 ```
