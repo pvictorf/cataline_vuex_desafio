@@ -6,8 +6,8 @@ export default createStore({
     currentPage: 'Faq',
     transition: '',
     faqs: [],
-    faq: {},
-    question: {}
+    faq: null,
+    question: null
   },
   mutations: {
     SET_FAQS(state, faqs) {

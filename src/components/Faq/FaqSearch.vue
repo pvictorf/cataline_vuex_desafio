@@ -19,15 +19,15 @@
       <p>Encontre sua dúvida</p>
     </div>
     <ul v-if="$faqs" class="question">
-      <template v-for="faq in $faqs" :key="faq.id">
+      <div v-for="faq in $faqs" :key="faq.id">
         <li class="question-item"
           v-for="question in faq.questions"
           :key="question.id"
-          @click="goToAnwser(question, faq)"
+          @click="goToAnwser(question)"
         >
           <span>{{ question.title }}</span>
         </li>
-      </template>
+      </div>
     </ul>
   </div>
 
@@ -44,12 +44,12 @@ export default {
   computed: {
     $faqs() {
       return this.$store.getters.$findFaqsBySearch(this.search)
-    }
+    },
   }, 
   methods: {
-    goToAnwser(question, faq) {
+    goToAnwser(question) {
       this.$store.dispatch('goTo', { page: 'FaqAnswer' })
-      this.$store.dispatch('selectFaq', faq)
+      //this.$store.dispatch('selectFaq', faq)
       this.$store.dispatch('selectQuestion', question)
     },
     goBack() {
