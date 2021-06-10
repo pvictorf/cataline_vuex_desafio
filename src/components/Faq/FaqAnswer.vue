@@ -23,10 +23,6 @@ export default {
   },
   methods: {
     goBack() {
-      const faq = this.$store.getters.$getFaq
-      if(!faq) {
-        return this.$store.dispatch('goBack', { page: 'Faq' })
-      }
       this.$store.dispatch('goBack', { page: 'FaqQuestion' })
     }
   }
