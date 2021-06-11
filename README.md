@@ -13,9 +13,9 @@ Demo: https://cataline-vuex-desafio.vercel.app/
 - Componentização
 - Dynamic componentes
 - Transitions
+- Customização animação
 - Gerenciamento de Estado (Vuex)
 - Conceitos de ES6 (filter e map)
-- Transition
 - CSS Grid
 - Styled scoped
 - Diretivas 
