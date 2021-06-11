@@ -27,7 +27,6 @@ export default createStore({
       state.question = question
     },
     SET_LAST_SEARCH(state, search) {
-      console.log(search)
       state.lastSearch = search
     }
   },
