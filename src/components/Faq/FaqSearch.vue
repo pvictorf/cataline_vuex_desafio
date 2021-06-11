@@ -37,7 +37,10 @@
 export default {
   mounted() {
     const lastSearch = this.$store.getters.$getLastSearch;
-    if(lastSearch) { this.search = lastSearch }
+    if(lastSearch) { 
+      this.search = lastSearch 
+      this.$store.commit('SET_LAST_SEARCH', '')
+    } 
     this.$refs.inputsearch.focus()
   },
   data() {

@@ -4,7 +4,7 @@
       <component :is="$currentPage" />
     </transition>
   </div>
-</template>
+</template> 
 
 <script>
 import Faq from '@/components/Faq/Faq.vue'

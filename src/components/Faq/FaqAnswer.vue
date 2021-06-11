@@ -21,11 +21,12 @@ export default {
       return this.$store.getters.$getQuestion
     }
   },
-  methods: {
+  methods: { 
     goBack() {
       const lastSearch = this.$store.getters.$getLastSearch;
       if(lastSearch) {
-        return this.$store.dispatch('goBack', { page: 'FaqSearch' })
+        this.$store.dispatch('goBack', { page: 'FaqSearch' })
+        return
       }
       this.$store.dispatch('goBack', { page: 'FaqQuestion' })
     }

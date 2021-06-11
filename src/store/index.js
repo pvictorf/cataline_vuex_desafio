@@ -69,7 +69,7 @@ export default createStore({
     },
     $getLastSearch(state) {
       return state.lastSearch
-    },
+    }, 
     $findFaqsBySearch: (state) => (search) => {
       const query = search.trim().toLowerCase();
       if(!query) return
