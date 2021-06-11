@@ -7,7 +7,8 @@ export default createStore({
     transition: '',
     faqs: [],
     faq: null,
-    question: null
+    question: null,
+    lastSearch: ''
   },
   mutations: {
     SET_FAQS(state, faqs) {
@@ -25,6 +26,10 @@ export default createStore({
     SET_QUESTION(state, question) {
       state.question = question
     },
+    SET_LAST_SEARCH(state, search) {
+      console.log(search)
+      state.lastSearch = search
+    }
   },
   actions: {
     fetchFaqs(ctx) {
@@ -61,6 +66,9 @@ export default createStore({
     },
     $getQuestion(state) {
       return state.question
+    },
+    $getLastSearch(state) {
+      return state.lastSearch
     },
     $findFaqsBySearch: (state) => (search) => {
       const query = search.trim().toLowerCase();

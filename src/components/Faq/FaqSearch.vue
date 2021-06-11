@@ -23,7 +23,7 @@
         <li class="question-item"
           v-for="question in faq.questions"
           :key="question.id"
-          @click="goToAnwser(question, faq)"
+          @click="goToAnwser(question)"
         >
           <span>{{ question.title }}</span>
         </li>
@@ -36,6 +36,8 @@
 <script>
 export default {
   mounted() {
+    const lastSearch = this.$store.getters.$getLastSearch;
+    if(lastSearch) { this.search = lastSearch }
     this.$refs.inputsearch.focus()
   },
   data() {
@@ -47,9 +49,9 @@ export default {
     },
   }, 
   methods: {
-    goToAnwser(question, faq) {
+    goToAnwser(question) {
+      this.$store.commit('SET_LAST_SEARCH', this.search)
       this.$store.dispatch('goTo', { page: 'FaqAnswer' })
-      this.$store.dispatch('selectFaq', faq)
       this.$store.dispatch('selectQuestion', question)
     },
     goBack() {
