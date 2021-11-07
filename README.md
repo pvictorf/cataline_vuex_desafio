@@ -5,7 +5,7 @@ Demo: https://cataline-vuex-desafio.vercel.app/
 
 ### Telas
 - Faq
-- Busca
+- Busca (Nova! não inclusa no desafio original)
 - Perguntas
 - Resposta
 
